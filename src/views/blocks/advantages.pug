@@ -9,12 +9,12 @@ section.section.c-white.decorated.decorated_bottom
       h5.t-a-center.mb-40.t-size-42 Преимущества системы
       .row.mb--30
         mixin block(path, text)
-          .adv-block.col-xl-3.col-sm-6.col-12.pb-30
-            .adv-block__container
-              .adv-block__icon
+          .advantages-block.col-xl-3.col-sm-6.col-12.pb-30
+            .advantages-block__container
+              .advantages-block__icon
                 svg.icon
                   use(xlink:href=path)
-              .adv-block__text
+              .advantages-block__text
                 p=text
         +block('img/icons/icons.svg#telemarketing-phone-operator', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod teididunt ut labore et dolore magna aliqua. Ut enim ad minim')
         +block('img/icons/icons.svg#big-stopwatch', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, labore et dolore magna aliqua. Ut enim ad minim')
