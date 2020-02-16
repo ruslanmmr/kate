@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Катя</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+  </head>
+  <body>
+    <!--preloader-->
+    <div class="preloader" style="background-color:#fff;position:fixed;width:100%;height:100%;top:0;left:0;z-index:1000;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;">
+      <svg viewBox="0 0 44 44" style="margin:auto;width:50px;height:50px;" stroke="#494949" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd" stroke-width="2">
+          <circle cx="22" cy="22" r="1">
+            <animate attributeName="r" begin="0s" dur="1.8s" values="1; 20" calcMode="spline" keyTimes="0; 1" keySplines="0.165, 0.84, 0.44, 1" repeatCount="indefinite"></animate>
+            <animate attributeName="stroke-opacity" begin="0s" dur="1.8s" values="1; 0" calcMode="spline" keyTimes="0; 1" keySplines="0.3, 0.61, 0.355, 1" repeatCount="indefinite"></animate>
+          </circle>
+          <circle cx="22" cy="22" r="1">
+            <animate attributeName="r" begin="-0.9s" dur="1.8s" values="1; 20" calcMode="spline" keyTimes="0; 1" keySplines="0.165, 0.84, 0.44, 1" repeatCount="indefinite"></animate>
+            <animate attributeName="stroke-opacity" begin="-0.9s" dur="1.8s" values="1; 0" calcMode="spline" keyTimes="0; 1" keySplines="0.3, 0.61, 0.355, 1" repeatCount="indefinite"></animate>
+          </circle>
+        </g>
+      </svg>
+    </div>
+    <!--page-->
+    <div class="wrapper">
+      <header class="header static">
+        <div class="container">
+          <div class="header__container">
+            <div class="logo"><a class="js-change-page" href="/index.html"><img src="img/logos/logo.png" alt="logo"></a></div>
+            <nav class="nav">
+              <ul class="nav__list">
+                                <li class="nav__item js-nav-item"><a class="nav__link js-animated js-change-page" href="/constructor.html">Конструктор</a></li>
+                                <li class="nav__item js-nav-item"><a class="nav__link js-animated js-change-page" href="/podkluchit.html">Как подключить</a></li>
+                                <li class="nav__item js-nav-item"><a class="nav__link js-animated js-change-page" href="/skolkostoit.html">Сколько стоит</a></li>
+                                <li class="nav__item js-nav-item"><a class="nav__link js-animated js-change-page" href="/pochemy.html">Почему Катя</a></li>
+                                <li class="nav__item js-nav-item"><a class="nav__link js-animated js-change-page" href="/index.html">Новости</a></li>
+                                <li class="nav__item js-nav-item"><a class="nav__link js-animated js-change-page" href="/contacts.html">Контакты</a></li>
+              </ul>
+              <div class="js-nav-item"><a class="button button_style1 js-animated" href="https://mybarbershop.ru/" target="_blank">MyBarbershop</a></div>
+            </nav><a class="button nav-toggle js-animated" href="javascript:void(0)"><span></span><span></span><span></span></a>
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <section class="section decorated decorated_bottom">
+          <div class="background">
+            <div class="scene">
+              <div class="lazy" data-src="img/главная.jpg" data-depth="0.05"></div>
+            </div>
+            <svg class="mask mask_bottom" viewBox="0 0 1920 36.7">
+              <use xlink:href="img/mask.svg#bottom"></use>
+            </svg>
+          </div>
+          <div class="section__container c-white">
+            <div class="container">
+              <div class="slider">
+                <div class="slider__container">
+                  <!--slide-->
+                  <div class="slide">
+                    <h5 class="slide__item t-size-48 mb-20">Бот оператор для барбершопа</h5>
+                    <p class="slide__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                    <div class="slide__item"><a class="button button_style2 js-animated scrollTo" href="#about">Узнать больше</a></div>
+                  </div>
+                  <!--slide-->
+                  <div class="slide">
+                    <h5 class="slide__item t-size-48 mb-20">Доступно для каждого барбершопа</h5>
+                    <p class="slide__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                  <!--slide-->
+                  <div class="slide">
+                    <h5 class="slide__item t-size-48 mb-20">Заголовок</h5>
+                    <p class="slide__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+                <div class="slider-pagination">
+                  <!--соответствует количеству слайдов--><a class="slider-pagination__trigger js-animated" href="javascript:void(0)"></a><a class="slider-pagination__trigger js-animated" href="javascript:void(0)"></a><a class="slider-pagination__trigger js-animated" href="javascript:void(0)"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section about" id="about">
+          <div class="background background_contain background_left">
+            <div class="lazy" data-src="img/фон1.jpg"></div>
+          </div>
+          <div class="background background_contain background_right">
+            <div class="lazy" data-src="img/Слой 20.jpg"></div>
+          </div>
+          <div class="section__container">
+            <div class="container">
+              <div class="about__label txt-label t-size-36"><span class="c-dark">Искусственный <strong>ИНТЕЛЛЕКТ </strong></span><span class="c-main">заменит Вашего администратора</span></div>
+              <div class="row">
+                <div class="col-xl-5 col-sm-12">
+                  <div class="b-image cover-box"><img class="lazy" data-src="img/Слой 22.jpg" alt=""></div>
+                </div>
+                <div class="col-xl-7 col-sm-12">
+                  <h5 class="t-size-42 mb-20 c-dark">О программе</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section c-white decorated decorated_bottom">
+          <div class="background overlay overlay_dark">
+            <div class="scene">
+              <div class="lazy" data-src="img/Слой 17.jpg" data-depth="0.05"></div>
+            </div>
+            <svg class="mask mask_top" viewBox="0 0 1920 31.9">
+              <use xlink:href="img/mask.svg#top"></use>
+            </svg>
+          </div>
+          <div class="section__container">
+            <div class="container">
+              <h5 class="t-a-center mb-40 t-size-42">Преимущества системы</h5>
+              <div class="row mb--30">
+                                <div class="adv-block col-xl-3 col-sm-6 col-12 pb-30">
+                                  <div class="adv-block__container">
+                                    <div class="adv-block__icon">
+                                      <svg class="icon">
+                                        <use xlink:href="img/icons/icons.svg#telemarketing-phone-operator"></use>
+                                      </svg>
+                                    </div>
+                                    <div class="adv-block__text">
+                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod teididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="adv-block col-xl-3 col-sm-6 col-12 pb-30">
+                                  <div class="adv-block__container">
+                                    <div class="adv-block__icon">
+                                      <svg class="icon">
+                                        <use xlink:href="img/icons/icons.svg#big-stopwatch"></use>
+                                      </svg>
+                                    </div>
+                                    <div class="adv-block__text">
+                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, labore et dolore magna aliqua. Ut enim ad minim</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="adv-block col-xl-3 col-sm-6 col-12 pb-30">
+                                  <div class="adv-block__container">
+                                    <div class="adv-block__icon">
+                                      <svg class="icon">
+                                        <use xlink:href="img/icons/icons.svg#shield"></use>
+                                      </svg>
+                                    </div>
+                                    <div class="adv-block__text">
+                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod teididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="adv-block col-xl-3 col-sm-6 col-12 pb-30">
+                                  <div class="adv-block__container">
+                                    <div class="adv-block__icon">
+                                      <svg class="icon">
+                                        <use xlink:href="img/icons/icons.svg#barber-pole"></use>
+                                      </svg>
+                                    </div>
+                                    <div class="adv-block__text">
+                                      <p>Lorem ipsum dolor sit amet, ididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                                    </div>
+                                  </div>
+                                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section example">
+          <div class="background background_top">
+            <div class="lazy" data-src="img/Слой 18.png"></div>
+          </div>
+          <div class="section__container">
+            <div class="container">
+              <div class="example__top row">
+                <div class="col-xl col-sm-12">
+                  <h5 class="mb-20 t-size-42 c-dark">Простота использования</h5>
+                  <div class="mb-20">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa </p>
+                  </div>
+                  <div class="row">
+                    <div class="col-xl-auto col-12"><a class="button button_style2 example__button js-change-page js-animated" href="/podkluchit.html#connection">Подключить</a></div>
+                  </div>
+                </div>
+                <div class="col-xl-auto col-sm-12">
+                  <div class="d-image-block">
+                    <div class="d-image-block__left lazy" data-src="img/Слой 7.jpg"></div><a class="d-video-button js-animated" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"><span class="d-video-button__bg lazy" data-src="img/Слой 51.jpg"></span><span class="d-video-button__item">
+                        <svg class="icon">
+                          <use xlink:href="img/icons/player.svg#play"></use>
+                        </svg></span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="example__bottom row mb--15">
+                <div class="col-xl-4 col-sm-6 col-12 pb-15">
+                  <div class="audio">
+                    <audio src="http://kolber.github.io/audiojs/demos/mp3/juicy.mp3"></audio>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-sm-6 col-12 pb-15">
+                  <div class="audio">
+                    <audio src="http://kolber.github.io/audiojs/demos/mp3/juicy.mp3"></audio>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-sm-6 col-12 pb-15">
+                  <div class="audio">
+                    <audio src="http://kolber.github.io/audiojs/demos/mp3/juicy.mp3"></audio>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section c-white">
+          <div class="background overlay">
+            <div class="scene">
+              <div class="lazy" data-src="img/Слой 8.jpg" data-depth="0.05"></div>
+            </div>
+          </div>
+          <div class="section__container">
+            <div class="container">
+              <h5 class="t-a-center mb-40 t-size-42">Новости</h5>
+              <div class="row compact mb--10">
+                <div class="col-xl-4 col-sm-12">
+                  <div class="row compact">
+                    <div class="news-block col-lg-12 col-sm-6 col-12 pb-10"><a class="news-block__container js-animated" href="#">
+                        <div class="cover-box"><img class="lazy" data-src="img/Слой 13.jpg" alt="bg"></div>
+                        <h6 class="news-block__title">Название новости</h6></a></div>
+                    <div class="news-block col-lg-12 col-sm-6 col-12 pb-10"><a class="news-block__container js-animated" href="#">
+                        <div class="cover-box"><img class="lazy" data-src="img/Слой 13.jpg" alt="bg"></div>
+                        <h6 class="news-block__title">Название новости</h6></a></div>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-sm-12">
+                  <div class="news-block news-block_center pb-10"><a class="news-block__container js-animated" href="#">
+                      <div class="cover-box"><img class="lazy" data-src="img/Слой 13.jpg" alt="bg"></div>
+                      <h6 class="news-block__title">Название новости</h6></a></div>
+                </div>
+                <div class="col-xl-4 col-sm-12">
+                  <div class="row compact">
+                    <div class="news-block col-xl-12 col-sm-6 col-12 pb-10"><a class="news-block__container js-animated" href="#">
+                        <div class="cover-box"><img class="lazy" data-src="img/Слой 13.jpg" alt="bg"></div>
+                        <h6 class="news-block__title">Название новости</h6></a></div>
+                    <div class="news-block col-xl-12 col-sm-6 col-12 pb-10"><a class="news-block__container js-animated" href="#">
+                        <div class="cover-box"><img class="lazy" data-src="img/Слой 13.jpg" alt="bg"></div>
+                        <h6 class="news-block__title">Название новости</h6></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section integration">
+          <div class="background">
+            <div class="lazy" data-src="img/398-3981558_igo-mid-winter-conference-network-png.png"></div>
+          </div>
+          <div class="section__container">
+            <div class="container">
+              <h5 class="t-a-center mb-40 t-size-42 c-dark">Возможность интеграции</h5>
+              <div class="row mb--20">
+                                <div class="intgr-block col-xl-3 col-sm-6 pb-20">
+                                  <div class="intgr-block__container cover-box cover-box_contain"> <img class="lazy" data-src="img/Слой 14.jpg" alt="logo"></div>
+                                </div>
+                                <div class="intgr-block col-xl-3 col-sm-6 pb-20">
+                                  <div class="intgr-block__container cover-box cover-box_contain"> <img class="lazy" data-src="img/whatsapp-logo-full.png" alt="logo"></div>
+                                </div>
+                                <div class="intgr-block col-xl-3 col-sm-6 pb-20">
+                                  <div class="intgr-block__container cover-box cover-box_contain"> <img class="lazy" data-src="img/Слой 15.jpg" alt="logo"></div>
+                                </div>
+                                <div class="intgr-block col-xl-3 col-sm-6 pb-20">
+                                  <div class="intgr-block__container cover-box cover-box_contain"> <img class="lazy" data-src="img/Слой 16.jpg" alt="logo"></div>
+                                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__container">
+            <div class="footer__logo">
+              <div class="logo"><a class="js-change-page" href="/index.html"><img src="img/logos/logo2.png" alt="logo"></a></div>
+              <div class="socials">
+                <ul class="socials__list">
+                                    <li class="socials__item"><a class="socials__link js-animated" href="#" target="_blank">
+                                        <svg class="icon">
+                                          <use xlink:href="img/icons/socials.svg#vk"></use>
+                                        </svg></a></li>
+                                    <li class="socials__item"><a class="socials__link js-animated" href="#" target="_blank">
+                                        <svg class="icon">
+                                          <use xlink:href="img/icons/socials.svg#youtube_alt"></use>
+                                        </svg></a></li>
+                                    <li class="socials__item"><a class="socials__link js-animated" href="#" target="_blank">
+                                        <svg class="icon">
+                                          <use xlink:href="img/icons/socials.svg#fb"></use>
+                                        </svg></a></li>
+                                    <li class="socials__item"><a class="socials__link js-animated" href="#" target="_blank">
+                                        <svg class="icon">
+                                          <use xlink:href="img/icons/socials.svg#ok"></use>
+                                        </svg></a></li>
+                                    <li class="socials__item"><a class="socials__link js-animated" href="#" target="_blank">
+                                        <svg class="icon">
+                                          <use xlink:href="img/icons/socials.svg#twitter"></use>
+                                        </svg></a></li>
+                                    <li class="socials__item"><a class="socials__link js-animated" href="#" target="_blank">
+                                        <svg class="icon">
+                                          <use xlink:href="img/icons/socials.svg#instagram"></use>
+                                        </svg></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-nav">
+              <ul class="footer-nav__list">
+                              <li class="footer-nav__item"><a class="footer-nav__link js-animated js-change-page" href="/index.html">Главная</a></li>
+                              <li class="footer-nav__item"><a class="footer-nav__link js-animated js-change-page" href="/podkluchit.html">Как подключить</a></li>
+                              <li class="footer-nav__item"><a class="footer-nav__link js-animated js-change-page" href="/index.html">О программе</a></li>
+              </ul>
+              <ul class="footer-nav__list">
+                              <li class="footer-nav__item"><a class="footer-nav__link js-animated js-change-page" href="/index.html">Новости</a></li>
+                              <li class="footer-nav__item"><a class="footer-nav__link js-animated js-change-page" href="/contacts.html">Контакты</a></li>
+                              <li class="footer-nav__item"><a class="footer-nav__link js-animated js-change-page" href="/constructor.html">Заказать</a></li>
+              </ul>
+            </div>
+            <div class="footer__mailing">
+              <h6 class="t-size-16 ttu mb-20 bold">УЗНАВАЙТЕ ОБ НОВОСТЯХ ПЕРВЫМИ</h6>
+              <form class="mailing" action="#">
+                <input class="input input_style2 size1" type="email" placeholder="Введите почту">
+                <button class="button button_style2 size1 js-animated">ПОДПИСАТЬСЯ</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <link rel="stylesheet" href="styles/common.min.css">
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

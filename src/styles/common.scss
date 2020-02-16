@@ -1,0 +1,130 @@
+@import "./partials/normalize";
+//fonts
+@import "./partials/fonts";
+//grid
+@import "./partials/custom-grid";
+
+//color 
+$colorA: rgb(223, 108, 38);
+$colorA2:#c55f20;
+$colorC: #494949;
+$colorB: #0b151a;
+$colorD: #dcdcdc;  
+$colorE: #7992af;
+$colorF: #1c3643;
+$colorC: #5c5c5c;
+
+//transition
+$trs1: .15s ease-out;
+$trs2: .3s ease-out;
+$trs3: 1s ease-out;
+$trs4: 0.5s ease-out;
+
+$shadow1: 0px 6px 18px 0px rgba(29, 32, 34, 0.15);
+$shadow11: 0px 0px 14px 0px rgba(91, 164, 228,0.40);
+
+
+body {
+  font-family: 'Gilroy';
+  font-size: 18px;
+  min-width: 320px;
+  line-height: 1.5;
+  color: $colorC;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  position: relative;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  &:after {
+    content: '';
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.25);
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: $trs3;
+    backdrop-filter: blur(2px);
+  }
+}
+.nav-opened {
+  .wrapper {
+    &:after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.content {
+  flex: 1 1 100%;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  transition: filter 1s ease-in-out;
+}
+.section {
+  position: relative;
+  &:first-child {
+    padding-top: 80px;
+  }
+  &__container {
+    padding: 60px 0 80px 0;
+    position: relative;
+    z-index: 3;
+  }
+  &__title {
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+
+
+@media all and(max-width: 1200px) {
+  .section {
+    &:first-child {
+      padding-top: 60px;
+    }
+  }
+}
+@media all and(max-width: 1024px) {
+  
+}
+@media all and(max-width: 768px) {
+  
+}
+@media all and(max-width: 576px) {
+  .section {
+    &__container {
+      padding: 50px 0 60px 0;
+    }
+  }
+}
+
+@import "./../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css";
+@import "./partials/audio";
+@import "./partials/text";
+@import "./partials/ui";
+@import "./partials/header";
+@import "./partials/footer";
+@import "./partials/slider";
+
+

@@ -1,0 +1,39 @@
+footer.footer
+  .container
+    .footer__container
+      .footer__logo
+        .logo
+          a(href="/index.html").js-change-page
+            img(src="img/logos/logo2.png" alt="logo")
+        .socials
+          ul.socials__list
+            mixin link(href)
+              li.socials__item
+                a(href="#" target='_blank').socials__link.js-animated
+                  svg.icon
+                    use(xlink:href=href)
+            +link('img/icons/socials.svg#vk')
+            +link('img/icons/socials.svg#youtube_alt')
+            +link('img/icons/socials.svg#fb')
+            +link('img/icons/socials.svg#ok')
+            +link('img/icons/socials.svg#twitter')
+            +link('img/icons/socials.svg#instagram')
+      .footer-nav
+        mixin item(title,href)
+          li.footer-nav__item
+            a(href=href).footer-nav__link.js-animated.js-change-page=title
+        ul.footer-nav__list
+          +item('Главная','/index.html')
+          +item('Как подключить', '/podkluchit.html')
+          +item('О программе', '/index.html')
+        ul.footer-nav__list
+          +item('Новости', '/index.html')
+          +item('Контакты', '/contacts.html')
+          +item('Заказать', '/constructor.html')
+      .footer__mailing
+        h6.t-size-16.ttu.mb-20.bold УЗНАВАЙТЕ ОБ НОВОСТЯХ ПЕРВЫМИ
+        form(action="#").mailing
+          input(type="email" placeholder="Введите почту").input.input_style2.size1
+          button.button.button_style2.size1.js-animated ПОДПИСАТЬСЯ
+
+         

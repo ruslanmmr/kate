@@ -1,0 +1,16 @@
+mixin section(title, subtitle, path)
+  section.section.decorated.decorated_bottom
+    .background.overlay
+      .scene
+        .lazy(data-src=path data-depth="0.05")
+      svg(viewBox="0 0 1920 36.7").mask.mask_bottom
+        use(xlink:href='img/mask.svg#bottom')
+    .section__container.c-white
+      .container
+        h1.page-title.t-size-48.mb-20=title
+        .breadcrumbs
+          ul.breadcrumbs__list
+            li.breadcrumbs__item
+              a(href="/index.html").breadcrumbs__link.js-animated.js-change-page Главная
+            li.breadcrumbs__item=subtitle
+      

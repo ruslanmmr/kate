@@ -1,0 +1,15 @@
+section.section.integration
+  .background
+    .lazy(data-src='img/398-3981558_igo-mid-winter-conference-network-png.png')
+  .section__container
+    .container
+      h5.t-a-center.mb-40.t-size-42.c-dark Возможность интеграции
+      .row.mb--20
+        mixin item(path)
+          .intgr-block.col-xl-3.col-sm-6.pb-20
+            .intgr-block__container.cover-box.cover-box_contain 
+              img(data-src=path alt="logo").lazy
+        +item('img/Слой 14.jpg')
+        +item('img/whatsapp-logo-full.png')
+        +item('img/Слой 15.jpg')
+        +item('img/Слой 16.jpg')

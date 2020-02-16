@@ -1,0 +1,87 @@
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1.15;
+  margin: 0 0 0 -0.05em;
+}
+p {
+  margin: 0;
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.t-a-center {
+  text-align: center;
+}
+.t-a-left {
+  text-align: left;
+}
+.t-a-right {
+  text-align: right;
+}
+.bold {
+  font-weight: 700 !important;
+}
+.weight-500 {
+  font-weight: 500;
+}
+.ttu {
+  text-transform: uppercase;
+}
+.t-size-72 {
+  font-size: 72px;
+}
+.t-size-64 {
+  font-size: 64px;
+}
+.t-size-48 {
+  font-size: 48px;
+}
+.t-size-42 {
+  font-size: 42px;
+}
+.t-size-36 {
+  font-size: 36px;
+}
+.t-size-30 {
+  font-size: 30px;
+}
+.t-size-28 {
+  font-size: 28px;
+}
+.t-size-24 {
+  font-size: 24px;
+}
+.t-size-22 {
+  font-size: 22px;
+}
+.t-size-20 {
+  font-size: 20px;
+}
+.t-size-18 {
+  font-size: 18px;
+}
+.t-size-16 {
+  font-size: 16px;
+}
+.t-size-14 {
+  font-size: 14px;
+}
+.t-size-12 {
+  font-size: 12px;
+}
+
+@media all and(max-width: 576px) {
+  .t-size-48 {
+    font-size: 36px;
+  }
+  .t-size-42 {
+    font-size: 34px;
+  }
+  .t-size-36 {
+    font-size: 32px;
+  }
+  .t-size-30 {
+    font-size: 26px;
+  }
+}

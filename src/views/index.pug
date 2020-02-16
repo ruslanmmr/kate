@@ -1,0 +1,17 @@
+extends layout/layout
+block content
+  section.section.decorated.decorated_bottom
+    .background
+      .scene
+        .lazy(data-src='img/главная.jpg' data-depth="0.05")
+      svg(viewBox="0 0 1920 36.7").mask.mask_bottom
+        use(xlink:href='img/mask.svg#bottom')
+    .section__container.c-white
+      .container
+        include blocks/slider
+  include blocks/about
+  include blocks/advantages
+  include blocks/example
+  include blocks/news
+  include blocks/integration
+

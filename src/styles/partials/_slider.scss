@@ -1,0 +1,49 @@
+.slider {
+  max-width: 600px;
+  &__container {
+    position: relative;
+  }
+}
+.slide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  .button {
+    max-width: 180px;
+    margin-top: 40px;
+  }
+}
+.slider-pagination {
+  display: flex;
+  margin-top: 70px;
+  &__trigger {
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    background-color: $colorD;
+    display: block;
+    transition: background-color $trs3, transform $trs1;
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+    &.active {
+      pointer-events: none;
+      background-color: $colorE;
+    }
+    &.touch,
+    &.hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+@media all and(max-width: 576px) {
+  .slider-pagination {
+    margin-top: 50px;
+  }
+  .slide .button {
+    margin-top: 30px;
+  }
+}

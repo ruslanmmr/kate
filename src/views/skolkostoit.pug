@@ -1,0 +1,17 @@
+extends layout/layout
+block content
+  section.section.decorated.decorated_bottom
+    .background.overlay
+      .scene
+        .lazy(data-src='img/Слой1.jpg' data-depth="0.05")
+      svg(viewBox="0 0 1920 36.7").mask.mask_bottom
+        use(xlink:href='img/mask.svg#bottom')
+    .section__container.c-white
+      .container
+        .breadcrumbs.mb-50
+          ul.breadcrumbs__list
+            li.breadcrumbs__item
+              a(href="/index.html").breadcrumbs__link.js-animated.js-change-page Главная
+            li.breadcrumbs__item Сколько стоит
+        include blocks/slider2
+  include blocks/form
