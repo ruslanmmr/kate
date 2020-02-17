@@ -672,8 +672,8 @@
 .advantages-block {
   text-align: center;
   &__icon {
-    width: 180px;
-    height: 180px;
+    width: 170px;
+    height: 170px;
     border-radius: 100%;
     border: 1px solid $colorA;
     position: relative;
@@ -707,7 +707,31 @@
   border-radius: 8px;
   overflow: hidden;
   height: 100%;
+  min-height: 300px;
   max-height: 420px;
+}
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    padding-left: 30px;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+    &:before {
+      content: '';
+      display: block;
+      border-radius: 14px;
+      width: 13px;
+      height: 13px;
+      background-color: $colorA;
+      position: absolute;
+      left: 0;
+      top: 0.45em;
+    }
+  }
 }
 
 @media all and(max-width: 1900px) {
@@ -720,6 +744,11 @@
 @media all and(max-width: 1024px) {
   .d-image-block {
     width: 300px;
+  }
+  .text-section {
+    .background {
+      display: none;
+    }
   }
   .about .background {
     display: none;
@@ -738,7 +767,6 @@
     margin: 70px auto 0 auto;
   }
   .b-image {
-    margin-bottom: 40px;
     height: auto;
     &::before {
       content: '';

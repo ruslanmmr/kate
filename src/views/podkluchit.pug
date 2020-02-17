@@ -2,4 +2,75 @@ extends layout/layout
 block content
   include blocks/pagination
   +section('Как подключить', 'Как подключить','img/Слой 111.jpg')
+  section.section
+    .section__container
+      .container
+        .row.mb--40
+          .col-xl-7.col-sm-12.pb-40
+            h5.t-size-42.mb-20.c-dark Название блока
+            ul.list
+              li Lorem ipsum dolor sit amet
+              li Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+              li Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+              li Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+          .col-xl-5.col-sm-12.pb-40
+            .b-image.cover-box
+              img.lazy(data-src="img/Слой 21.jpg", alt="")
+  section.section.c-white.decorated.decorated_bottom
+    .background.overlay.overlay_dark
+      .scene
+        .lazy(data-src='img/Слой 17.jpg' data-depth="0.05")
+      svg(viewBox="0 0 1920 31.9").mask.mask_top
+        use(xlink:href='img/mask.svg#top')
+    .section__container
+      .container
+        h5.t-a-center.mb-40.t-size-42 Этапы подключения
+        .row.mb--30.center
+          .advantages-block.col-xl-4.col-sm-6.col-12.pb-30
+            .advantages-block__container
+              .advantages-block__icon
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#checklist')
+              .advantages-block__text
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod teididunt ut labore et dolore magna aliqua. 
+          .advantages-block.col-xl-4.col-sm-6.col-12.pb-30
+            .advantages-block__container
+              .advantages-block__icon
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#script')
+              .advantages-block__text
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod teididunt ut labore et dolore magna aliqua.
+          .advantages-block.col-xl-4.col-sm-6.col-12.pb-30
+            .advantages-block__container
+              .advantages-block__icon
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#microphone')
+              .advantages-block__text
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod teididunt ut labore et dolore magna aliqua.  
+          .advantages-block.col-xl-4.col-sm-6.col-12.pb-30
+            .advantages-block__container
+              .advantages-block__icon
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#bot')
+              .advantages-block__text
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod teididunt ut labore et dolore magna aliqua.
+          .advantages-block.col-xl-4.col-sm-6.col-12.pb-30
+            .advantages-block__container
+              .advantages-block__icon
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#inclined-rocket')
+              .advantages-block__text
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod teididunt ut labore et dolore magna aliqua.  
+  section.section.text-section
+    .background.background_contain.background_right
+      .lazy(data-src='img/Как подключить.jpg')
+    .section__container
+      .container
+        .row
+          .col-xl-7.col-md-12
+            h5.t-size-42.mb-20.c-dark Название блока
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                
+
   include blocks/form
