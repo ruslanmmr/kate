@@ -2,19 +2,19 @@ header.header.static
   .container
     .header__container
       .logo
-        a(href="/index.html").js-change-page
+        a(href="index.html").js-change-page
           img(src="img/logos/logo.png" alt="logo")
       nav.nav
         ul.nav__list
           mixin link(title, href)
             li.nav__item.js-nav-item
               a(href=href).nav__link.js-animated.js-change-page=title
-          +link('Конструктор', '/constructor.html')
-          +link('Как подключить', '/podkluchit.html')
-          +link('Сколько стоит', '/skolkostoit.html')
-          +link('Почему Катя', '/pochemy.html')
-          +link('Новости', '/index.html')
-          +link('Контакты', '/contacts.html')
+          +link('Конструктор', 'constructor.html')
+          +link('Как подключить', 'podkluchit.html')
+          +link('Сколько стоит', 'skolkostoit.html')
+          +link('Почему Катя', 'pochemy.html')
+          +link('Новости', 'index.html')
+          +link('Контакты', 'contacts.html')
         .js-nav-item
           a(href="https://mybarbershop.ru/" target='_blank').button.button_style1.js-animated MyBarbershop
       a(href="javascript:void(0)").button.nav-toggle.js-animated
