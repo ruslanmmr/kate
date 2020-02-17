@@ -3,7 +3,7 @@ footer.footer
     .footer__container
       .footer__logo
         .logo
-          a(href="/index.html").js-change-page
+          a(href="index.html").js-change-page
             img(src="img/logos/logo2.png" alt="logo")
         .socials
           ul.socials__list
@@ -23,13 +23,13 @@ footer.footer
           li.footer-nav__item
             a(href=href).footer-nav__link.js-animated.js-change-page=title
         ul.footer-nav__list
-          +item('Главная','/index.html')
-          +item('Как подключить', '/podkluchit.html')
-          +item('О программе', '/index.html')
+          +item('Главная','index.html')
+          +item('Как подключить', 'podkluchit.html')
+          +item('О программе', 'index.html')
         ul.footer-nav__list
-          +item('Новости', '/index.html')
-          +item('Контакты', '/contacts.html')
-          +item('Заказать', '/constructor.html')
+          +item('Новости', 'index.html#news')
+          +item('Контакты', 'contacts.html')
+          +item('Заказать', 'constructor.html')
       .footer__mailing
         h6.t-size-16.ttu.mb-20.bold УЗНАВАЙТЕ ОБ НОВОСТЯХ ПЕРВЫМИ
         form(action="#").mailing
