@@ -9,10 +9,10 @@ $colorA: #df6c26;
 $colorA2:#c55f20;
 $colorC: #494949;
 $colorB: #0b151a;
-$colorD: #dcdcdc;  
+$colorD: #dcdcdc;   
 $colorE: #7992af;
 $colorF: #1c3643;
-$colorC: #5c5c5c;
+$colorG: #1e2426;
 
 //transition
 $trs1: .15s ease-out;
@@ -90,7 +90,7 @@ body {
     position: relative;
     z-index: 3;
   }
-  &_bpd-nine {
+  &_bpd-none {
     .section__container {
       padding-bottom: 0 !important;
     }

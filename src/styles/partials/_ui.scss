@@ -596,15 +596,18 @@
       align-items: center;
     }
   }
+  .background {
+    height: 810px;
+    top: auto;
+    bottom: 0;
+  }
+  .lazy {
+    background-size: auto 88%;
+  }
 }
 .c-total-price {
   line-height: 1;
   white-space: nowrap;
-}
-.constructor {
-  .lazy {
-    background-size: auto 88%;
-  }
 }
 .intgr-block {
   &__container {
@@ -777,6 +780,7 @@
       transform: translate(-50%,-50%);
       width: 45%;
       height: 45%;
+      fill: $colorG;
     }
   }
 }
@@ -815,6 +819,155 @@
     }
   }
 }
+.stages {
+  display: flex;
+  margin-right: -95px;
+  flex-wrap: wrap;
+}
+.stage-item {
+  padding-right: 95px;
+  padding-bottom: 40px;
+  position: relative;
+  &__decoration {
+    content: '';
+    display: block;
+    width: 90px;
+    height: 18px;
+    position: absolute;
+    right: 10px;
+    background: url('../img/---------.png') no-repeat center center;
+    background-size: contain;
+    top: 25px;
+  }
+  &:nth-child(2n) {
+    .stage-item__decoration {
+      top: 125px;
+      transform: rotate(180deg);
+    }
+  }
+  &:nth-child(4),
+  &:nth-child(8) {
+    .stage-item__decoration {
+      display: none;
+    }
+  }
+  &__container {
+    position: relative;
+    width: 200px;
+    padding-left: 13px;
+  }
+  &__index {
+    font-size: 130px;
+    color: $colorB;
+    position: absolute;
+    left: 0;
+    right: 0;
+    line-height: 1;
+    top: 10px;
+    left: 0;
+    font-weight: 800;
+  }
+  &__icon {
+    border: 1px solid $colorA;
+    border-radius: 100%;
+    height: 150px;
+    width: 150px;
+    padding: 8px;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 1;
+      background-color: $colorA;
+      border-radius: 100%;
+    }
+    .icon {
+      position: absolute;
+      z-index: 2;
+      width: 70px;
+      height: 70px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      fill: $colorG;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.35;
+  }
+  &_first {
+    display: flex;
+    .stage-item {
+      &__icon {
+        width: 120px;
+        height: 120px;
+        padding: 5px;
+        margin-top: 15px;
+        .icon {
+          height: 50px;
+          width: 50px;
+        }
+      }
+      &__container {
+        &:nth-child(1) {
+          margin-top: 40px;
+          padding: 0;
+          width: auto;
+        }
+        &:nth-child(2) {
+          width: 150px;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+  &_final {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 0 !important;
+    .stage-item__decoration {
+      display: none;
+    }
+    .stage-item {
+      &__icon {
+        margin: 0 30px 0 0;
+        flex-shrink: 0;
+      }
+      &__container {
+        display: flex;
+        align-items: center;
+        width: auto;
+      }
+      &__title {
+        font-size: 48px;
+        display: block;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: $colorB;
+      }
+      &__text {
+        font-size: 24px;
+        text-align: left;
+        line-height: 1.25;
+      }
+    }
+  }
+}
+
+.why {
+  .background {
+    height: 700px;
+    top: auto;
+    bottom: -60px;
+  }
+}
 
 @media all and(max-width: 1900px) {
   .about .background,
@@ -822,9 +975,43 @@
     display: none;
   }
 }
+@media all and(max-width: 1420px) {
+  .why .background {
+    display: none;
+  }
+}
 
+@media all and(max-width: 1200px) {
+  .stages {
+    justify-content: center;
+    margin-right: -125px;
+  }
+  .stage-item {
+    padding-right: 125px;
+    &__decoration {
+      width: 105px;
+      right: 20px;
+    }
+    &:nth-child(4) {
+      .stage-item__decoration {
+        display: block;
+      }
+    }
+    &:nth-child(3),
+    &:nth-child(6) {
+      .stage-item__decoration {
+        display: none;
+      }
+    }
+  }
+}
 
 @media all and(max-width: 1024px) {
+  .stage-item {
+    &__decoration {
+      display: none !important;
+    }
+  }
   .d-image-block {
     width: 300px;
     &__right {
@@ -844,6 +1031,22 @@
   }
 }
 @media all and(max-width: 768px) {
+  .stage-item_final {
+    .stage-item__container {
+      display: block;
+    }
+    .stage-item__title {
+      font-size: 32px;
+      text-align: center;
+    }
+    .stage-item__icon {
+      margin: 0 auto 10px auto;
+    }
+    .stage-item__text {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
   .d-image-block {
     width: 100%;
     max-width: 420px;

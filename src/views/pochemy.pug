@@ -2,4 +2,91 @@ extends layout/layout
 block content
   include blocks/pagination
   +section('Почему Катя', 'Почему Катя','img/layer111.jpg')
+  section.section.why
+    .background.background_contain.background_right
+      .lazy(data-src='img/bbsss_1.png')
+    .section__container
+      .container
+        .mb-50
+          h5.t-size-42.mb-20.c-dark Текстовый блок
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem 
+        .stages
+          .stage-item.stage-item_first
+            .stage-item__container
+              .stage-item__icon
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#checklist')
+              p.stage-item__text Запись клиента
+            .stage-item__container
+              span.stage-item__index 1
+              .stage-item__icon
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#phone-call')
+              p.stage-item__text Входящий звонок
+            span.stage-item__decoration
+          .stage-item
+            span.stage-item__decoration
+            .stage-item__container
+              span.stage-item__index 2
+              .stage-item__icon
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#hair-cut')
+              p.stage-item__text Катя не забудет позвонить и предложить доп.услугу
+          .stage-item
+            span.stage-item__decoration
+            .stage-item__container
+              span.stage-item__index 3
+              .stage-item__icon
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#round-wall-clock')
+              p.stage-item__text Узнает успевает ли клиент на свою запись
+          .stage-item 
+            span.stage-item__decoration
+            .stage-item__container
+              span.stage-item__index 4
+              .stage-item__icon
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#conversation')
+              p.stage-item__text Предоставит всю необходимую информацию барберу
+          .stage-item
+            span.stage-item__decoration
+            .stage-item__container
+              span.stage-item__index 5
+              .stage-item__icon
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#young-businessman')
+              p.stage-item__text После оказаных услуг проведет контроль качества
+          .stage-item
+            span.stage-item__decoration
+            .stage-item__container
+              span.stage-item__index 6
+              .stage-item__icon
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#dialogue')
+              p.stage-item__text Опубликует отзыв после разговора
+          .stage-item
+            span.stage-item__decoration
+            .stage-item__container
+              span.stage-item__index 7
+              .stage-item__icon
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#comb')
+              p.stage-item__text Узнает получилось ли у клиента самостоятельно дома сделать улакдку
+          .stage-item
+            span.stage-item__decoration
+            .stage-item__container
+              span.stage-item__index 8
+              .stage-item__icon
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#barber')
+              p.stage-item__text Не забудет позвонить позвонить и предложить коррекцию
+        .stage-item.stage-item_final
+          span.stage-item__decoration
+          .stage-item__container
+            .stage-item__icon
+              svg.icon
+                use(xlink:href='img/icons/icons.svg#customer-service')
+            .stage-item__content
+              h6.stage-item__title ПОСЛЕДНИЙ ЭТАП
+              p.stage-item__text Позвонит клиенту и запишет его<br> на повторый визит
   include blocks/form

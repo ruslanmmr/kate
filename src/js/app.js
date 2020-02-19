@@ -66,7 +66,7 @@ let preloader = {
       }
 
       let animation = gsap.timeline({onComplete:function(){preloader.element.remove()}})
-        .to(preloader.element, {duration:0.75,autoAlpha:0,scale:1.5,ease:'power2.out'})
+        .to(preloader.element, {duration:0.75,autoAlpha:0,ease:'power2.out'})
 
     },preloader.delay*1000)
   }
@@ -467,6 +467,19 @@ function onloadTransitions() {
     .fromTo(title, {x:-10,y:45}, {duration:0.8,y:0,x:0,ease:'power2.out'}, '-=0.8')
     .fromTo(brd_item, {autoAlpha:0}, {duration:0.8,autoAlpha:1,ease:'power2.inOut',stagger:{amount:0.2}},'-=0.75')
     .fromTo(brd_item, {x:-10,y:45}, {duration:0.8,y:0,x:0,ease:'power2.out',stagger:{amount:0.2}}, '-=1')
+
+  if($('.stage-item').length>0) {
+    let icon = $('.stage-item__icon'),
+        text = $('.stage-item__text, .stage-item__title'),
+        index = $('.stage-item__index'),
+        decor = $('.stage-item__decoration');
+
+    let animation = gsap.timeline()
+      .fromTo(icon, {autoAlpha:0,scale:0.5}, {duration:1,scale:1,autoAlpha:1,ease:'power2.out',stagger:{amount:1}})
+      .fromTo(text, {autoAlpha:0,y:20}, {duration:1,y:0,autoAlpha:1,ease:'power2.out',stagger:{amount:1}},'-=1.75')
+      .fromTo(index, {autoAlpha:0,scale:0.5,xPercent:50}, {duration:1,scale:1,xPercent:0,autoAlpha:1,ease:'power2.out',stagger:{amount:1}},'-=1')
+      .fromTo(decor, {autoAlpha:0,scale:0.5}, {duration:1,scale:1,autoAlpha:1,ease:'power2.out',stagger:{amount:1}},'-=1.25')
+  }
 }
 function funcybox() {
   $.fancybox.defaults.btnTpl.close = '<button data-fancybox-close class="fancybox-button js-animated fancybox-button--close" title="{{CLOSE}}">' +

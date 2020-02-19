@@ -22,20 +22,84 @@
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
   </head>
   <body>
+    <style type="text/css">
+      .preloader {
+        background-color:#fff;
+        position:fixed;
+        width:100%;
+        height:100%;
+        top:0;
+        left:0;
+        z-index:1000;
+        display:-webkit-box;
+        display:-webkit-flex;
+        display:-ms-flexbox;
+        display:flex;
+      }
+      .preloader__item span {
+        display: block;
+        position: absolute;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 50%;
+        animation: animation 1.2s cubic-bezier(0,0.2,0.8,1) infinite;
+      }
+      .preloader__item span:nth-child(1) {
+        border-color: #df6c26;
+      }
+      .preloader__item span:nth-child(2) {
+        border-color: #df6c26;
+        animation-delay: -0.6s;
+      }
+      .preloader__content {
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        opacity: 0;
+        animation: fade 0.5s ease-in-out;
+        animation-fill-mode: forwards;
+      }
+      .preloader__item {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform: translateZ(0) scale(1);
+        backface-visibility: hidden;
+        transform-origin: 0 0;
+      }
+      .preloader__item span { 
+        box-sizing: border-box; 
+      }
+      @keyframes fade {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes animation {
+        0% {
+          top: 50px;
+          left: 50px;
+          width: 0;
+          height: 0;
+          opacity: 1;
+        }
+          100% {
+          top: 0px;
+          left: 0px;
+          width: 100px;
+          height: 100px;
+          opacity: 0;
+        }
+      }
+    </style>
     <!--preloader-->
-    <div class="preloader" style="background-color:#fff;position:fixed;width:100%;height:100%;top:0;left:0;z-index:1000;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;">
-      <svg viewBox="0 0 44 44" style="margin:auto;width:50px;height:50px;" stroke="#494949" xmlns="http://www.w3.org/2000/svg">
-        <g fill="none" fill-rule="evenodd" stroke-width="2">
-          <circle cx="22" cy="22" r="1">
-            <animate attributeName="r" begin="0s" dur="1.8s" values="1; 20" calcMode="spline" keyTimes="0; 1" keySplines="0.165, 0.84, 0.44, 1" repeatCount="indefinite"></animate>
-            <animate attributeName="stroke-opacity" begin="0s" dur="1.8s" values="1; 0" calcMode="spline" keyTimes="0; 1" keySplines="0.3, 0.61, 0.355, 1" repeatCount="indefinite"></animate>
-          </circle>
-          <circle cx="22" cy="22" r="1">
-            <animate attributeName="r" begin="-0.9s" dur="1.8s" values="1; 20" calcMode="spline" keyTimes="0; 1" keySplines="0.165, 0.84, 0.44, 1" repeatCount="indefinite"></animate>
-            <animate attributeName="stroke-opacity" begin="-0.9s" dur="1.8s" values="1; 0" calcMode="spline" keyTimes="0; 1" keySplines="0.3, 0.61, 0.355, 1" repeatCount="indefinite"></animate>
-          </circle>
-        </g>
-      </svg>
+    <div class="preloader">
+      <div class="preloader__content">
+        <div class="preloader__item"><span></span><span></span></div>
+      </div>
     </div>
     <!--page-->
     <div class="wrapper">
@@ -79,7 +143,7 @@
                     </div>
                   </div>
                 </section>
-        <section class="section section_bpd-nine">
+        <section class="section section_bpd-none">
           <div class="section__container">
             <div class="container">
               <h5 class="t-size-42 mb-20 c-dark">Текстовый блок</h5>
