@@ -2,4 +2,120 @@ extends layout/layout
 block content
   include blocks/pagination
   +section('Конструктор персонального бота', 'Конструктор','img/layer1.jpg')
+  section.section.section_bpd-nine
+    .section__container
+      .container
+        h5.t-size-42.mb-20.c-dark Текстовый блок
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem 
+  section.section.constructor#constructor
+    .section__container
+      .background.background_contain.background_left.background_top
+        .lazy(data-src='img/bbsh.png')
+      .background.background_contain.background_right.background_bottom
+        .lazy(data-src='img/evgeniy-beloborodko.png')
+      .container
+        h5.t-size-42.mb-40.c-dark.t-a-center Выберите свои параметры
+        .row
+          .col-xl-6.col-sm-12
+            //item
+            .f-check-item.toggle-group
+              label.checkbox.js-animated
+                input(type="checkbox" data-price='1000' hidden)
+              a(href="javascript:void(0)").f-check-item__title.toggle-button.js-animated Презентация вашего барбершопа
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#download')
+              .f-check-item__description.toggle-content
+                p.t-size-16 Позвонит вашему клиенту, подтвердит его запись, оставленную не через ассистента, предложит доп. услуги и всячески будет склонять клиента заказать их.
+              span.f-check-item__price 1 000 Р
+            //item
+            .f-check-item.toggle-group
+              label.checkbox.js-animated
+                input(type="checkbox" data-price='4500' hidden)
+              a(href="javascript:void(0)").f-check-item__title.toggle-button.js-animated Работа с входящими звонками +
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#download')
+              .f-check-item__description.toggle-content
+                p.t-size-16 Робот отвечает самостоятельно на входящий звонок, записывает клиента на услуги в программу онлайн записи. Робот может рассказать описание любой услуги, тайминг и каждый раз, каждому клиенту будет рекомендовать какую-нибудь дополнительную услугу (например: черная маска, патчи, камуфляж седины, коррекция воском).
+              span.f-check-item__price 4 500 Р
+            //item
+            .f-check-item.toggle-group
+              label.checkbox.js-animated
+                input(type="checkbox" data-price='2500' hidden)
+              a(href="javascript:void(0)").f-check-item__title.toggle-button.js-animated Холодный звонок
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#download')
+              .f-check-item__description.toggle-content
+                p.t-size-16 На каждую оказанную услугу вы назначаете временной промежуток, через который робот позвонит и предложит записаться (для примера: клиент брил бороду и через 5-12 дней робот позвонит и предложит записаться на коррекцию).
+              span.f-check-item__price 2 500 Р
+            //item
+            .f-check-item.toggle-group
+              label.checkbox.js-animated
+                input(type="checkbox" data-price='300' hidden)
+              a(href="javascript:void(0)").f-check-item__title.toggle-button.js-animated Информатор
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#download')
+              .f-check-item__description.toggle-content
+                p.t-size-16 Позвонит вашему клиенту, подтвердит его запись, оставленную не через ассистента.
+              span.f-check-item__price 300 Р
+            //item
+            .f-check-item.toggle-group
+              label.checkbox.js-animated
+                input(type="checkbox" data-price='0' hidden)
+              a(href="javascript:void(0)").f-check-item__title.toggle-button.js-animated Аналитические отчеты
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#download')
+              .f-check-item__description.toggle-content
+                p.t-size-16 Катя умеет группировать, выделять, создавать, рекомендовать, подчеркивать... говоря проще любой отчет, который нужен именно вам - она сделает и отправит его на почту или в мессенджер.
+              span.f-check-item__price Стоимость определить невозможно,<br> индивидуальный подход
+          .col-xl-6.col-sm-12
+            //item
+            .f-check-item.toggle-group
+              label.checkbox.js-animated
+                input(type="checkbox" data-price='2500' hidden)
+              a(href="javascript:void(0)").f-check-item__title.toggle-button.js-animated Работа с входящими звонками
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#download')
+              .f-check-item__description.toggle-content
+                p.t-size-16 Робот отвечает самостоятельно на входящий звонок, записывает клиента на услуги в программу онлайн записи.
+              span.f-check-item__price 2 500 Р
+            //item
+            .f-check-item.toggle-group
+              label.checkbox.js-animated
+                input(type="checkbox" data-price='1200' hidden)
+              a(href="javascript:void(0)").f-check-item__title.toggle-button.js-animated Контроль качества выполненных работ
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#download')
+              .f-check-item__description.toggle-content
+                p.t-size-16 Робот позвонит клиенту и узнает его мнение о посещении вашего барбершоп и оказанном ему сервисе. Узнает впечатление о барбершопе, администраторе и естественно о барбере и его работе и все это опубликует в виде отзыва.
+              span.f-check-item__price 1 200 Р
+            //item
+            .f-check-item.toggle-group
+              label.checkbox.js-animated
+                input(type="checkbox" data-price='5000' hidden)
+              a(href="javascript:void(0)").f-check-item__title.toggle-button.js-animated Холодный звонок +
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#download')
+              .f-check-item__description.toggle-content
+                p.t-size-16 На каждую оказанную услугу вы назначаете временной промежуток, через который робот позвонит и предложит записаться (для примера: клиент брил бороду и через 5-12 дней робот позвонит и предложит записаться на коррекцию). Робот будет всячески убеждать записаться, предлагать бонусы и скидки, говорить много комплиментов.
+              span.f-check-item__price 5 000 Р
+            //item
+            .f-check-item.toggle-group
+              label.checkbox.js-animated
+                input(type="checkbox" data-price='1500' hidden)
+              a(href="javascript:void(0)").f-check-item__title.toggle-button.js-animated Информатор +
+                svg.icon
+                  use(xlink:href='img/icons/icons.svg#download')
+              .f-check-item__description.toggle-content
+                p.t-size-16 Позвонит вашему клиенту, подтвердит его запись, оставленную не через ассистента, предложит доп. услуги и всячески будет склонять клиента заказать их.
+              span.f-check-item__price 1 500 Р
+          .constructor__bottom.col-sm-12
+            .row.mb--20
+              .col-xl.col-12.pb-20
+                .c-total-price.t-size-36.c-dark.bold Итого: 
+                  span 0 
+                  | Р
+              .col-xl-auto.pb-20
+                a(href="#connection").button.button_style2.size1.js-animated.scrollTo Перейти к заявке
+  
+  
   include blocks/form

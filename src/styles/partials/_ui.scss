@@ -65,6 +65,8 @@
   &.size1 {
     border-radius: 50px;
     line-height: 48px;
+    font-size: 18px;
+    min-width: 210px;
   }
   &.size2 {
     border-radius: 60px;
@@ -125,68 +127,44 @@
     transform: scale(0.95);
   }
 }
-
 //checkboxes
 .checkbox {
   position: relative;
-  padding: 0 0 0 25px;
   display: block;
   cursor: pointer;
-  transition: $trs1;
-  min-height: 20px;
-  font-size: 16px !important;
-  line-height: 20px;
-  user-select: none;
-  i {
-    box-sizing: border-box;
-    display: inline-block;
-    line-height: 14px;
-    width: 16px;
-    height: 16px;
-    text-align: center;
-    border-radius: 2px;
-    background-color: transparent;
-    position: absolute;
-    left: 0;
-    top: 2px;
-    z-index: 2;
-    font-size: 10px;
-    transition: inherit;
-    color: #1e0602;
-    text-align: center;
-    &:before {
-      transform: scale(0);
-      opacity: 0;
-      transition: inherit;
-      width: 10px;
-      height: 10px;
-      display: inline-block;
-    }
-  }
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid $colorA;
   input {
     position: absolute;
     visibility: hidden;
     opacity: 0;
   }
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    background-color: $colorA;
+    opacity: 0;
+    transition: inherit;
+  }
   &.checked {
-    i {
-      background-color: #dbeeff;
-      &:before {
-        transform: scale(1);
-        opacity: 1;
-      }
+    &:before {
+      opacity: 1;
     }
   }
   &.touch,
   &.hover {
-    i {
-      background-color: #f0f8ff;
-    }
+    transform: scale(1.05);
   }
   &.focus {
-    i {
-      transform: scale(1.05);
-    }
+    transform: scale(0.95);
   }
   &.disabled {
     pointer-events: none;
@@ -230,6 +208,56 @@
   left: -30px;
   overflow: hidden;
 }
+.f-check-item {
+  padding-left: 50px;
+  position: relative;
+  margin-bottom: 40px;
+  .checkbox {
+    position: absolute;
+    left: 0;
+    top: 4px;
+  }
+  &__description {
+    margin: 5px 0;
+  }
+  &__price {
+    color: $colorA;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    display: block;
+  }
+  &__title {
+    color: $colorF;
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    line-height: 30px;
+    padding: 0 20px 0 0;
+    .icon {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      right: 0;
+      top: 10px;
+      transition: inherit;
+      fill: $colorF;
+    }
+    &.active {
+      .icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+.toggle-content {
+  display: none !important;
+  &.active {
+    display: block !important;
+  }
+}
 .background {
   position: absolute;
   width: 100%;
@@ -266,32 +294,42 @@
   }
   &_left {
     .lazy {
-      background-position: left center;
+      background-position-x: left;
     }
   }
   &_right {
     .lazy {
-      background-position: right center;
+      background-position-x: right;
     }
   }
   &_top {
     .lazy {
-      background-position: top center;
+      background-position-y: top;
     }
   }
+  &_bottom {
+    .lazy {
+      background-position-y: bottom;
+    }
+  }
+}
+.mask {
+  display: none;
+  position: absolute;
+  width: 102%;
+  height: auto;
+  left: -1%;
+  z-index: 2;
+  &_bottom {
+    bottom: -1px;
+  }
+  &_top {
+    top: -1px;
+  }
+}
+.desktop {
   .mask {
     display: block;
-    position: absolute;
-    width: 102%;
-    height: auto;
-    left: -1%;
-    z-index: 2;
-    &_bottom {
-      bottom: -1px;
-    }
-    &_top {
-      top: -1px;
-    }
   }
 }
 .cover-box {
@@ -406,6 +444,8 @@
   .button {
     flex: 0 0 auto;
     transform: none !important;
+    font-size: 14px;
+    min-width: 0px;
   }
 }
 .news-block {
@@ -551,15 +591,25 @@
   .background {
     opacity: 0.45;
   }
-  &__button {
-    font-size: 20px;
-    width: 220px;
-    line-height: 55px;
-    border-radius: 55px;
-  }
   &__top {
     margin-bottom: 70px;
     align-items: center;
+  }
+}
+.constructor {
+  &__bottom {
+    .row {
+      align-items: center;
+    }
+  }
+}
+.c-total-price {
+  line-height: 1;
+  white-space: nowrap;
+}
+.constructor {
+  .lazy {
+    background-size: auto 88%;
   }
 }
 .intgr-block {
@@ -735,8 +785,9 @@
 }
 
 @media all and(max-width: 1900px) {
-  .about .background {
-    opacity: 0.5;
+  .about .background,
+  .constructor .background {
+    display: none;
   }
 }
 
@@ -749,9 +800,6 @@
     .background {
       display: none;
     }
-  }
-  .about .background {
-    display: none;
   }
   .adv-block {
     &__icon {
@@ -817,6 +865,14 @@
     }
     img {
       padding: 15px;
+    }
+  }
+  .f-check-item {
+    margin-bottom: 30px;
+    &__title,
+    &__price {
+      font-size: 22px;
+      line-height: 28px;
     }
   }
 }

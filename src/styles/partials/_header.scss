@@ -41,17 +41,17 @@
     transition: width $trs1, background-color $trs1;
     &:nth-child(1) {
       top: 20px;
-      right: 23px;
+      right: 20px;
       width: 30px;
     }
     &:nth-child(2) {
       top: 29px;
       width: 23px;
-      right: 23px;
+      right: 20px;
     }
     &:nth-child(3) {
       bottom: 20px;
-      right: 23px;
+      right: 20px;
       width: 30px;
     }
   }
@@ -62,7 +62,7 @@
       background-color: $colorA;
       &:nth-child(1),
       &:nth-child(3) {
-        width: 20px;
+        width: 23px;
       } 
       &:nth-child(2) {
         width: 30px;

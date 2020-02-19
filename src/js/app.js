@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function(){
   funcybox();
   scroll();
   parallax();
+  toggleblocks();
 });
 //загрузили все
 window.onload = function() {
@@ -133,6 +134,9 @@ let $checkbox = {
         $(this).removeClass('checked');
       }
     })
+    if($('.c-total-price').length>0) {
+      totalPrice()
+    }
   }
 }
 let $header = {
@@ -532,5 +536,69 @@ function parallax() {
       limitY: '0',
       limitX: '60'
     });
+  })
+}
+function priceCorrecting(number, decimals) {
+  let i, j, kw, kd, km;
+  i = parseInt(number = (+number || 0).toFixed(decimals)) + '';
+  ((j = i.length) > 3) ? (j = j % 3) : (j = 0)
+  km = j ? i.substr(0, j) + ' ' : '';
+  kw = i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + ' ');
+  kd = (decimals ? '.' + Math.abs(number - i).toFixed(decimals).replace(/-/, '0').slice(2) : '');
+  return (km+kw+kd).replace(/(0+)$/, '').replace(/[^0-9]$/, '');
+}
+function totalPrice() {
+  let totalVal = 0,
+      $totalVal = $('.c-total-price span'),
+      $item = $('.f-check-item');
+
+  $item.each(function() {
+    if($(this).find('input').prop('checked') ) {
+      totalVal = totalVal+(+$(this).find('input').data('price'));
+    }
+  })
+  priceCorrecting(totalVal,2)
+  $totalVal.text(priceCorrecting(totalVal,2)+' ');
+}
+//toggle
+function toggleblocks() {
+  $(document).on('click', '.toggle-button', function(event) {
+    event.preventDefault();
+
+    let $container = $(this).closest('.toggle-group');
+    let $content = $container.find('.toggle-content').eq(0);
+    let $btns = $container.find('.toggle-button').not($content.find('.toggle-button'));
+
+
+    if($container.hasClass('active')) {
+      $container.removeClass('active');
+      $content.removeClass('active');
+      $btns.each(function() {
+        $(this).removeClass('active');
+        if($(this).data('show-text')!==undefined) {
+          if($(this).find('span').length>0) {
+            $(this).find('span').text($(this).data('show-text'))
+          } else {
+            $(this).text($(this).data('show-text'))
+          }
+        }
+      })
+    } else {
+      $container.addClass('active');
+      $content.addClass('active');
+      $btns.each(function() {
+        $(this).addClass('active');
+        if($(this).data('hide-text')!==undefined) {
+          if($(this).find('span').length>0) {
+            $(this).find('span').text($(this).data('hide-text'))
+            console.log('2')
+          } else {
+            $(this).text($(this).data('hide-text'))
+          }  
+        }
+      })
+    }
+
+
   })
 }

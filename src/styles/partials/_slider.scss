@@ -10,9 +10,8 @@
   top: 0;
   opacity: 0;
   visibility: hidden;
-  .button {
-    max-width: 180px;
-    margin-top: 40px;
+  &__button {
+    margin-top: 30px;
   }
 }
 .slider-pagination {
@@ -42,8 +41,5 @@
 @media all and(max-width: 576px) {
   .slider-pagination {
     margin-top: 50px;
-  }
-  .slide .button {
-    margin-top: 30px;
   }
 }
