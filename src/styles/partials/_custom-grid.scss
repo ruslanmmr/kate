@@ -63,7 +63,7 @@
   margin-bottom: -10px;
 }
 .mb--15 {
-  margin-bottom: -10px;
+  margin-bottom: -15px;
 }
 .mb--20 {
   margin-bottom: -20px;
@@ -665,9 +665,6 @@
   }
 }
 @media (max-width: 576px) {
-  .mb-50:not(:last-child) {
-    margin-bottom: 40px;
-  }
   .col {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
