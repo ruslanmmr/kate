@@ -148,7 +148,6 @@ let $header = {
 
     $header.animation = gsap.timeline({paused:true})
       .fromTo($header.el, {yPercent:-100}, {immediateRender:false,duration:0.5,yPercent:0,ease:'power2.out'})
-      .fromTo($header.el, {boxShadow:'none'}, {immediateRender:false,duration:0.5,boxShadow:'0px 0px 5px 0px rgba(0,0,0,0.1)',ease:'power2.out'},'-=0.5')
     
     if(scroll>100) {
       flag=false;
