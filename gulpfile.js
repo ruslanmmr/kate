@@ -34,10 +34,49 @@ gulp.task("pug", function () {
     }))
     .on("end", browsersync.reload);
 });
-gulp.task("scripts", function () {
+gulp.task("js", function() {
   return gulp.src("./src/js/app.js")
     .pipe(webpackStream({
       mode: 'development',
+      performance: {
+        hints: false,
+        maxEntrypointSize: 1000,
+        maxAssetSize: 1000
+      },
+      output: {
+        filename: 'app.js',
+      },
+      module: {
+        rules: [{
+          test: /\.(js)$/,
+          exclude: /(node_modules)/,
+          loader: 'babel-loader',
+          options: {
+          presets: [
+                [
+                    "@babel/preset-env",
+                    {
+                      targets: {
+                          node: "8.10"
+                      }
+                    }
+                ]
+            ]
+          }
+        }]
+      }
+    }))
+    .pipe(rename({
+      suffix: ".min"
+    }))
+    .pipe(gulp.dest("./dest/js/"))
+    .pipe(debug({"title": "scripts"}))
+    .on("end", browsersync.reload);
+});
+gulp.task("production", function () {
+  return gulp.src("./src/js/app.js")
+    .pipe(webpackStream({
+      mode: 'production',
       performance: {
         hints: false,
         maxEntrypointSize: 1000,
@@ -151,35 +190,35 @@ gulp.task("serve", function () {
     res();
   });
 });
-//
 gulp.task("watch", function () {
   return new Promise((res, rej) => {
     watch("./src/views/**/*.pug", gulp.series("pug"));
     watch("./src/styles/**/*.scss", gulp.series("styles"));
-    watch("./src/js/**/*.js", gulp.series("scripts"));
+    watch("./src/js/**/*.js", gulp.series("js"));
     watch(["./src/img/**/*.{jpg,jpeg,png,gif,svg}", "!./src/img/favicons/*.{jpg,jpeg,png,gif}"], gulp.series("images"));
     watch("./src/img/favicons/*.{jpg,jpeg,png,gif}", gulp.series("favicons"));
     watch(["./src/**/*", "!./src/img/**/*", "!./src/js/**/*", "!./src/styles/**/*", "!./src/views/**/*"], gulp.series("dest"));
     res();
   });
 });
-
-// BUILD
-gulp.task("default", gulp.series("clean",
-  gulp.parallel("pug", "styles", "scripts", "images", "favicons", "dest"),
-  gulp.parallel("watch", "serve")
-));
-
-//gulp deploy
-gulp.task("deploy", function () {
+gulp.task("transfer", function () {
   return gulp.src('./dest/**')
     .pipe(rsync({
       root: './dest/',
-      hostname: 'bitrix334.timeweb.ru',
-      destination: '/home/c/cd94559/bitrix/public_html/dest',
+      hostname: 'vh210.timeweb.ru',
+      destination: '/home/c/cq98725/bitrix/public_html/kate',
+      username: 'cq98725',
       archive: true,
-      username: 'cd94559',
       silent: false,
-      compress: true,
+      compress: true
   }));
 });
+//gulp deploy
+gulp.task("deploy", gulp.series("production", "transfer"));
+
+
+// BUILD
+gulp.task("default", gulp.series("clean",
+  gulp.parallel("pug", "styles", "js", "images", "favicons", "dest"),
+  gulp.parallel("watch", "serve")
+));
