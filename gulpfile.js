@@ -36,6 +36,7 @@ gulp.task("pug", function () {
 });
 gulp.task("js", function() {
   return gulp.src("./src/js/app.js")
+    .pipe(sourcemaps.init())
     .pipe(webpackStream({
       mode: 'development',
       performance: {
@@ -69,12 +70,14 @@ gulp.task("js", function() {
     .pipe(rename({
       suffix: ".min"
     }))
+    .pipe(sourcemaps.write("./maps/"))
     .pipe(gulp.dest("./dest/js/"))
     .pipe(debug({"title": "scripts"}))
     .on("end", browsersync.reload);
 });
 gulp.task("production", function () {
   return gulp.src("./src/js/app.js")
+    .pipe(sourcemaps.init())
     .pipe(webpackStream({
       mode: 'production',
       performance: {
@@ -108,6 +111,7 @@ gulp.task("production", function () {
     .pipe(rename({
       suffix: ".min"
     }))
+    .pipe(sourcemaps.write("./maps/"))
     .pipe(gulp.dest("./dest/js/"))
     .pipe(debug({"title": "scripts"}))
     .on("end", browsersync.reload);

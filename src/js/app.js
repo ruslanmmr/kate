@@ -341,7 +341,7 @@ let $slider = {
   $pagitem: $('.slider-pagination__trigger'),
   initialized: false,
   available: false,
-  intervalDuration: 4000,
+  intervalDuration: 10000,
   index: 0,
   init: function() {
     if($slider.$parent.length>0) {
